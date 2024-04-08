@@ -733,6 +733,11 @@ Se você optar pelo React, a decisão de usar o TypeScript é opcional (mas
 recomendamos!). Aqui você pode encontrar mais informações sobre
 como iniciar seu projeto com [Typescript e React](https://pt.vitejs.dev/guide/#scaffolding-your-first-vite-project).
 
+Se você usa Angular, **recomendamos usar a versão 14**. Para isso, é necessário ter instalada a versão 12 do NodeJS. 
+Você pode encontrar um guia de instalação 
+[aqui](https://github.com/Laboratoria/frontend-technologies-simple-example/tree/main/angular-example)
+ou consultar com seus coaches.
+
 O aplicativo deve ser um _Single Page App_. Os pedidos serão enviados por meio
 de um _tablet_, mas **não queremos um aplicativo nativo**, mas sim um aplicativo
 Web que seja **mobile-first**.
