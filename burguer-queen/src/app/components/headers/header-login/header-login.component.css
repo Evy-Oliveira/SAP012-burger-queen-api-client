@@ -1,0 +1,14 @@
+.header-login{
+    padding: 8px;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+}
+.figure-img-header-login{
+    display: flex;
+    justify-content: center;
+    width: 50vh;
+}
+.img-header-login{
+    width: 100%;
+}
