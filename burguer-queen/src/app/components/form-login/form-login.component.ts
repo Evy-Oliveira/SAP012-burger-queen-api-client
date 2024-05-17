@@ -1,10 +1,10 @@
 import { NgIf } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule} from '@angular/material/input';
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
@@ -16,21 +16,27 @@ import { ButtonComponent } from '../button/button.component';
 })
 export class FormLoginComponent {
   @Output() sendForm: EventEmitter<UserLogin> = new EventEmitter<UserLogin>();
+  form: FormGroup;
 
-  formEmail!: string;
-  formPassword!: string;
-
-  email = new FormControl('', [Validators.required, Validators.email]);
   hide = true;
 
+  constructor(){
+    this.form = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('')
+    });
+  }
+
   getErrorMessage(){
-    if(this.email.hasError('required')){
+    const verificaEmail: any = this.form.get('email');
+    if(verificaEmail || verificaEmail === null) return '';
+    if(verificaEmail.hasError('required')){
       return 'Você deve inserir um e-mail válido'
     }
-    return this.email.hasError('email') ? 'E-mail inválido' : '';
+    return verificaEmail.hasError('email') ? 'E-mail inválido' : '';
   }
   getData(): UserLogin{
-    const userlogin:UserLogin = {email: this.formEmail, password: this.formPassword};
+    const userlogin:UserLogin = this.form.value;
     console.log(userlogin);
     return userlogin;
   }
