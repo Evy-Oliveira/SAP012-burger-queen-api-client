@@ -35,14 +35,9 @@ export class FormLoginComponent {
     }
     return verificaEmail.hasError('email') ? 'E-mail inválido' : '';
   }
-  getData(): UserLogin{
-    const userlogin:UserLogin = this.form.value;
-    console.log(userlogin);
-    return userlogin;
-  }
 
   clickLogin(){
-    this.sendForm.emit(this.getData());
+    this.sendForm.emit(this.form.value);
   }
 
 }

@@ -13,6 +13,8 @@ import { FormLoginComponent } from "./components/form-login/form-login.component
 import { MatButtonModule} from '@angular/material/button';
 import { ButtonComponent } from "./components/button/button.component";
 import { HttpClientModule } from '@angular/common/http';
+import { PedidoComponent } from './pages/pedido/pedido.component';
+import { OpcoesComponent } from './pages/opcoes/opcoes.component';
 
 
 
@@ -21,7 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
         AppComponent,
         LoginComponent,
         FooterComponent,
-        HeaderLoginComponent
+        HeaderLoginComponent,
+        PedidoComponent,
+        OpcoesComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

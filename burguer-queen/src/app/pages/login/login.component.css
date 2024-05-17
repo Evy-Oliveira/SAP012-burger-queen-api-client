@@ -1,4 +1,4 @@
-app-form-login, app-button{
+app-form-login{
     display: flex;
     justify-content: center;
 }
