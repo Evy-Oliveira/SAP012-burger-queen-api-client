@@ -5,13 +5,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderLoginComponent } from './components/headers/header-login/header-login.component';
-import { ButtonComponent } from './components/button/button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { MatIconModule} from '@angular/material/icon';
 import { FormLoginComponent } from "./components/form-login/form-login.component";
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule} from '@angular/material/button';
+import { ButtonComponent } from "./components/button/button.component";
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -20,8 +21,7 @@ import {MatButtonModule} from '@angular/material/button';
         AppComponent,
         LoginComponent,
         FooterComponent,
-        HeaderLoginComponent,
-        ButtonComponent
+        HeaderLoginComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -33,7 +33,9 @@ import {MatButtonModule} from '@angular/material/button';
         MatInputModule,
         MatIconModule,
         FormLoginComponent,
-        MatButtonModule
+        MatButtonModule,
+        ButtonComponent,
+        HttpClientModule
     ]
 })
 export class AppModule { }
