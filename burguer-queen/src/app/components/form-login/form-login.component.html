@@ -1,0 +1,23 @@
+<section class="form-login" [formGroup]="form">
+
+  <mat-form-field class="form-login-email">
+    <mat-label>Enter your email</mat-label>
+    <input matInput formControlName="email" type="email"  placeholder="pat@example.com" required />
+    <mat-error 
+    *ngIf="form.get('email')">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+  
+  <mat-form-field class="form-login-password">
+    <mat-label>Enter your password</mat-label>
+    <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" />
+    <button mat-icon-button matSuffix (click)="hide = !hide" 
+    [attr.aria-label]="'Hide password'"
+    [attr.aria-pressed]="hide">
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <app-button class="botao-entrar" [label]="'Entrar'" (onClick)="clickLogin()"></app-button>
+  
+</section>
+

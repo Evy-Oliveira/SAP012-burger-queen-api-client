@@ -1,0 +1,11 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.footer-desenvolvedor {
+  font-size: 16px;
+  color: #eadaca;
+}
