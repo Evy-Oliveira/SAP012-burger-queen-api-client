@@ -3,5 +3,12 @@
   flex-direction: column;
   width: 50vh;
   justify-content: center;
+  align-items: center;
   height: 25vh;
 }
+mat-form-field{
+  width: 100%;
+}
+mat-label, mat-icon, mat-error{
+    color: #b32222;
+  }

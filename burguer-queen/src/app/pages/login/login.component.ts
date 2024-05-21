@@ -26,7 +26,7 @@ export class LoginComponent {
         },
       error: (error) =>{
         console.log(error);
-        this.loginError = 'Email ou senha incorreto';
+        this.loginError = 'Email ou senha não cadastrados';
       }
     });
   }

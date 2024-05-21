@@ -29,11 +29,14 @@ export class FormLoginComponent {
 
   getErrorMessage(){
     const verificaEmail: any = this.form.get('email');
-    if(verificaEmail || verificaEmail === null) return '';
+    // if(verificaEmail || verificaEmail === null) return '';
     if(verificaEmail.hasError('required')){
       return 'Você deve inserir um e-mail válido'
     }
-    return verificaEmail.hasError('email') ? 'E-mail inválido' : '';
+    else if(verificaEmail.hasError('email')){
+     return verificaEmail.hasError('email') ? 'E-mail inválido' : '';
+    }
+    return;
   }
 
   clickLogin(){

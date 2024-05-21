@@ -1,4 +1,12 @@
 app-form-login{
     display: flex;
     justify-content: center;
+    padding: 8px;
+    margin: 8px;
+}
+.error{
+    display: flex;
+    justify-content: center;
+    color: #eadaca;
+    margin: 8px;
 }
